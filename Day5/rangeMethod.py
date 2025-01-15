@@ -4,8 +4,11 @@
 #   print(number)
 
 # Adding numbers
-total = 0
-for num in range(1,101):
-  total += num
+# total = 0
+# for num in range(1,101):
+#   total += num
 
-print(total)
+# print(total)
+
+for num in range(0,10):
+  print(num)

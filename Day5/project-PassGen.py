@@ -13,23 +13,49 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
 
 
-password = ""
-# Here char holds the value of the range from 0 to user entered value
-for char in range(0, nr_letters):
-  print(char)
-  password += random.choice(letters)
-  
+# password = ""
+# # Here char holds the value of the range from 0 to user entered value that many time loop will run
+# for char in range(0, nr_letters):
+#   print(char)
+#   password += random.choice(letters)
 
-for char in range(0, nr_symbols):
-  print(char)
-  password += random.choice(symbols)
+# for char in range(0, nr_symbols):
+#   print(char)
+#   password += random.choice(symbols)
   
-for char in range(0, nr_numbers):
-   print(char)
-   password += random.choice(numbers)
+# for char in range(0, nr_numbers):
+#    print(char)
+#    password += random.choice(numbers)
 
-print(password)
+# print(password)
 
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
+password_list = []
+# Here char holds the value of the range from 0 to user entered value that many time loop will run
+for char in range(0, nr_letters):
+  # print(char)
+  # password_list += random.choice(letters)
+  password_list.append(random.choice(letters))
+
+for char in range(0, nr_symbols):
+  # print(char)
+  password_list += random.choice(symbols)
+  password_list.append(random.choice(symbols))
+  
+for char in range(0, nr_numbers):
+  #  print(char)
+   password_list.append(random.choice(numbers))
+
+print(password_list)
+random.shuffle(password_list)
+print(password_list)
+
+# combining / joining the each character
+password_combined = ""
+
+for char in password_list:
+  password_combined += char
+
+print(f'Your password is {password_combined}')
