@@ -61,7 +61,7 @@ def caesar(original_text,shift_amount, encode_or_decode):
 
     print(f"Here is the {encode_or_decode}d result :{output_text}" )
 
-caesar(original_text=text,shift_amount=shift,encode_or_decode=direction)
+# caesar(original_text=text, shift_amount=shift, encode_or_decode=direction)
 
 # Part 3 - Reorganisiong Code
 should_continue = True
